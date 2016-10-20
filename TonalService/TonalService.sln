@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "TonalService", "TonalService\TonalService.ccproj", "{EB36278D-B526-468C-B446-AB1C0309D7CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TonalServiceWebRole", "TonalServiceWebRole\TonalServiceWebRole.csproj", "{EEEBD42A-AEB6-4D90-B653-B898D06809A9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EB36278D-B526-468C-B446-AB1C0309D7CC} = {EB36278D-B526-468C-B446-AB1C0309D7CC}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToneReader", "..\..\..\..\Desktop\SWENG500-master\SWENG500-master\ToneReader\ToneReader.csproj", "{BA0EC2EE-9389-40A5-B0AF-8F414B0DEC98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB36278D-B526-468C-B446-AB1C0309D7CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB36278D-B526-468C-B446-AB1C0309D7CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB36278D-B526-468C-B446-AB1C0309D7CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB36278D-B526-468C-B446-AB1C0309D7CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEEBD42A-AEB6-4D90-B653-B898D06809A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEEBD42A-AEB6-4D90-B653-B898D06809A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEEBD42A-AEB6-4D90-B653-B898D06809A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEEBD42A-AEB6-4D90-B653-B898D06809A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA0EC2EE-9389-40A5-B0AF-8F414B0DEC98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA0EC2EE-9389-40A5-B0AF-8F414B0DEC98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA0EC2EE-9389-40A5-B0AF-8F414B0DEC98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA0EC2EE-9389-40A5-B0AF-8F414B0DEC98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
