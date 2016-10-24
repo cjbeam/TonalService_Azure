@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -14,16 +15,34 @@ namespace TonalServiceWebRole
     public interface ITonalService
     {
         [OperationContract]
-        string GetAnalysis(string email, string text);
+        string GetAnalysis(string email, string text, string userName, string password);
     }
     
     public class EmailAnalysis : ITonalService
     {
-        public string GetAnalysis(string email, string text)
+        public string GetAnalysis(string email, string text, string userName, string password)
         {
+            if (IsValidUser(userName, password) == false)
+            {
+                return "Invalid Login Credentials";
+            }
             var provider = new AnalysisProvider();
             provider.Analyze(email, text);
             return provider.EmailAnalysis;
+        }
+
+        private bool IsValidUser(string userName, string password)
+        {
+            if (userName != null && password != null)
+            {
+                if (userName == ConfigurationManager.AppSettings.Get("UserName") && password == ConfigurationManager.AppSettings.Get("Password"))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+
         }
     }
 }
